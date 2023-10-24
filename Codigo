@@ -18,5 +18,9 @@ precios = ["Tiquete sencillo: 500 colones", "Tiquete por un día: 1.000 colones"
 i = 0
 
 opcion = int(input("Digite la opción que desea: \n 1. Ver Rutas \n 2. Ver Precios \n 3. Adquirir Tiquetes \n 4. Consultar Cantidad de espacios disponibles \n 5. Salir \n"))
-
-
+if opción == 1:
+    print("Ver Rutas")
+elif opción == 2:
+    print("Ver Precios")
+elif opción == 3:
+    print("Adquirir Tiquetes")
