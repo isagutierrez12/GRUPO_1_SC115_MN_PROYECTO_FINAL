@@ -17,3 +17,5 @@ rutas = ["Ruta 1: Coronado - San José", "Ruta 2: Guadalupe - San José", "Ruta 
 precios = ["Tiquete sencillo: 500 colones", "Tiquete por un día: 1.000 colones", "Tiquete semanal: 6.000 colones", "Tiquete mensual: 20.000 colones"]
 
 opcion = int(input)("Digite la opción que desea: ")
+
+i = 0
