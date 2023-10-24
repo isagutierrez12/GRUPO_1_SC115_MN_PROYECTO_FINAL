@@ -16,19 +16,29 @@ rutas = ["Ruta 1: Coronado - San José", "Ruta 2: Guadalupe - San José", "Ruta 
 precios = ["Tiquete sencillo: 500 colones", "Tiquete por un día: 1.000 colones", "Tiquete semanal: 6.000 colones", "Tiquete mensual: 20.000 colones"]
 
 i = 0
+j = 0
 
 while i < 1:
     opcion = int(input("Digite la opción que desea: \n 1. Ver Rutas \n 2. Ver Precios \n 3. Adquirir Tiquetes \n 4. Consultar Cantidad de espacios disponibles \n 5. Salir \n "))
     if opción == 1:
-        print("Ver Rutas")
-
+        print("Las rutas disponibles son:)
+        print(rutas[0])
+        print(rutas[1])
+        print(rutas[2])
+        print(rutas[3])
+        print(rutas[4])
+        
         respuesta = int(input("Digite la opción que desea: \n 1. Volver al menú principal \n 2. Salir))
-        if respuesta == 1:
-            i = 0
-        elif respuesta == 2:
-            i = 1
-        else:
-            print("Por favor digite una opción válida")
+        while j < 1:
+            if respuesta == 1:
+                i = 0
+                j = 1
+            elif respuesta == 2:
+                i = 1
+                j = 1
+            else:
+                print("Por favor digite una opción válida")
+                j = 0
 
     elif opción == 2:
         print("Ver Precios")
