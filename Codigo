@@ -27,5 +27,4 @@ elif opcion == 4:
     print("Consultar Cantidad de espacios disponibles")
 elif opcion == 5:
     print("Gracias por utilizar Radiador Springs S.A.")
-else opcion == 6:
-    print("Seleccione una opción válida")
+else: print("Seleccione una opción válida")
