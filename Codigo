@@ -26,5 +26,5 @@ elif opción == 3:
     print("Adquirir Tiquetes")
 elif opcion == 4:
     print("Consultar Cantidad de espacios disponibles")
-else opcion ==5
+else opcion == 5
     print("Salir")
