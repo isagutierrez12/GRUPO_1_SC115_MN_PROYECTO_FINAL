@@ -48,34 +48,46 @@ while i < 1:
         print(precios[3])
         
        respuesta = int(input("Digite la opción que desea: \n 1. Volver al menú principal \n 2. Salir))
-        if respuesta == 1:
-            i = 0
-        elif respuesta == 2:
-            i = 1
-        else:
-            print("Por favor digite una opción válida")
+            while j < 1:
+            if respuesta == 1:
+                i = 0
+                j = 1
+            elif respuesta == 2:
+                i = 1
+                j = 1
+            else:
+                print("Por favor digite una opción válida")
+                j = 0
 
     elif opción == 3:
         print("Adquirir Tiquetes")
 
        respuesta = int(input("Digite la opción que desea: \n 1. Volver al menú principal \n 2. Salir))
-        if respuesta == 1:
-            i = 0
-        elif respuesta == 2:
-            i = 1
-        else:
-            print("Por favor digite una opción válida")
+        while j < 1:
+            if respuesta == 1:
+                i = 0
+                j = 1
+            elif respuesta == 2:
+                i = 1
+                j = 1
+            else:
+                print("Por favor digite una opción válida")
+                j = 0
 
     elif opcion == 4:
         print("Consultar Cantidad de espacios disponibles")
 
         respuesta = int(input("Digite la opción que desea: \n 1. Volver al menú principal \n 2. Salir))
-        if respuesta == 1:
-            i = 0
-        elif respuesta == 2:
-            i = 1
-        else:
-            print("Por favor digite una opción válida")
+        while j < 1:
+            if respuesta == 1:
+                i = 0
+                j = 1
+            elif respuesta == 2:
+                i = 1
+                j = 1
+            else:
+                print("Por favor digite una opción válida")
+                j = 0
 
     elif opcion == 5:
         print("Gracias por utilizar Radiador Springs S.A.")
