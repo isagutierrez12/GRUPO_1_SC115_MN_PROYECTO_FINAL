@@ -32,8 +32,26 @@ while i < 1:
 
     elif opción == 2:
         print("Ver Precios")
+
+       respuesta = int(input("Digite la opción que desea: \n 1. Volver al menú principal \n 2. Salir))
+        if respuesta == 1:
+            i = 0
+        elif respuesta == 2:
+            i = 1
+        else:
+            print("Por favor digite una opción válida")
+
     elif opción == 3:
         print("Adquirir Tiquetes")
+
+       respuesta = int(input("Digite la opción que desea: \n 1. Volver al menú principal \n 2. Salir))
+        if respuesta == 1:
+            i = 0
+        elif respuesta == 2:
+            i = 1
+        else:
+            print("Por favor digite una opción válida")
+
     elif opcion == 4:
         print("Consultar Cantidad de espacios disponibles")
 
