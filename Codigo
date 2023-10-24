@@ -29,13 +29,26 @@ while i < 1:
             i = 1
         else:
             print("Por favor digite una opción válida")
+
     elif opción == 2:
         print("Ver Precios")
     elif opción == 3:
         print("Adquirir Tiquetes")
     elif opcion == 4:
         print("Consultar Cantidad de espacios disponibles")
+
+        respuesta = int(input("Digite la opción que desea: \n 1. Volver al menú principal \n 2. Salir))
+        if respuesta == 1:
+            i = 0
+        elif respuesta == 2:
+            i = 1
+        else:
+            print("Por favor digite una opción válida")
+
     elif opcion == 5:
         print("Gracias por utilizar Radiador Springs S.A.")
         i = 1
-    else: print("Seleccione una opción válida")
+
+    else: 
+        print("Seleccione una opción válida")
+        i = 0
