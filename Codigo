@@ -17,6 +17,6 @@ precios = ["Tiquete sencillo: 500 colones", "Tiquete por un día: 1.000 colones"
 
 i = 0
 
-opcion = int(input)("Digite la opción que desea: ")
+opcion = int(input("Digite la opción que desea: "))
 
 
