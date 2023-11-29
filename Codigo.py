@@ -73,6 +73,7 @@ def espacios():
 
 
 def Menu():
+    i = 0
     while True:
         opcion = int(input("Digite la opción que desea: \n 1. Ver Rutas \n 2. Ver Precios \n 3. Adquirir Tiquetes \n 4. Consultar Cantidad de espacios disponibles \n 5. Salir \n "))
         if opcion == 1:
