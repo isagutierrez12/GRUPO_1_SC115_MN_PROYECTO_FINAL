@@ -72,11 +72,16 @@ def campos(matriz):
         print("Selección de asiento no válida.")
     
 def espacios(matriz):
-    print("Espacios disponibles:")
+    disponibles = 0
     for x in range (0,5):
         for y in range (0,2):
             print(matriz[x][y],end= " ")
         print("\n")
+    for x in range (0,5):
+        for y in range (0,2):
+            if matriz[x][y] != "O":
+                disponibles += 1
+    print(f"Espacios disponibles: {disponibles}")
 
 
 def Menu():
