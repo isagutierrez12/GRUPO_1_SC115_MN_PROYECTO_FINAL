@@ -74,6 +74,8 @@ def espacios():
 
 def Menu():
     i = 0
+    rutas = ["Ruta 1: Coronado - San José","Ruta 2: Guadalupe - San José","Ruta 3: Tibas - San José","Ruta 4: San Pedro - San José","Ruta 5: Santa Marta - San José"]
+    precios = ["Tiquete sencillo: 500 colones", "Tiquete por un día: 1.000 colones", "Tiquete semanal: 6.000 colones", "Tiquete mensual: 20.000 colones"]
     while True:
         opcion = int(input("Digite la opción que desea: \n 1. Ver Rutas \n 2. Ver Precios \n 3. Adquirir Tiquetes \n 4. Consultar Cantidad de espacios disponibles \n 5. Salir \n "))
         if opcion == 1:
