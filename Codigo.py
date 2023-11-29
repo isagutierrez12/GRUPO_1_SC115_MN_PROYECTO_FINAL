@@ -13,14 +13,14 @@ unidimensional.
 
 def control():
     while true:
-    respuesta = int(input("Digite la opción que desea: \n 1. Volver al menú principal \n 2. Salir \n"))
-        if respuesta == 1:
-            principal()
-        elif respuesta == 2:
-            print("Gracias por utilizar Radiador Springs S.A.")
-            break
-        else:
-            print("Por favor digite una opción válida")
+        respuesta = int(input("Digite la opción que desea: \n 1. Volver al menú principal \n 2. Salir \n"))
+            if respuesta == 1:
+                principal()
+            elif respuesta == 2:
+                print("Gracias por utilizar Radiador Springs S.A.")
+                break
+            else:
+                print("Por favor digite una opción válida")
 
 
 def rutas():
@@ -80,24 +80,10 @@ def principal():
             rutas()
             control()
 
-                
-
         elif opcion == 2:
             print("Los precios disponibles son:")
             precios()
-            j = 0
-            while j < 1:
-                respuesta = int(input("Digite la opción que desea: \n 1. Volver al menú principal \n 2. Salir \n"))
-                if respuesta == 1:
-                    i = 0
-                    j = 1
-                elif respuesta == 2:
-                    print("Gracias por utilizar Radiador Springs S.A.")
-                    i = 1
-                    j = 1
-                else:
-                    print("Por favor digite una opción válida")
-                    j = 0
+            control()
 
         elif opcion == 3:
             j = 0
@@ -142,8 +128,9 @@ def principal():
 
         elif opcion == 5:
             print("Gracias por utilizar Radiador Springs S.A.")
-            i = 1
+            break
 
         else:
             print("Seleccione una opción válida")
-            i = 0
+
+principal()
