@@ -71,79 +71,79 @@ def espacios():
             print(f" [{fila + 1}, {columna + 1}]","")
         print()
 
-i = 0
 
-while i < 1:
-    opcion = int(input("Digite la opción que desea: \n 1. Ver Rutas \n 2. Ver Precios \n 3. Adquirir Tiquetes \n 4. Consultar Cantidad de espacios disponibles \n 5. Salir \n "))
-    if opcion == 1:
-        print("Las rutas disponibles son:")
-        rutas()
-        j = 0
-        while j < 1:
-            
+def principal():
+    while true:
+        opcion = int(input("Digite la opción que desea: \n 1. Ver Rutas \n 2. Ver Precios \n 3. Adquirir Tiquetes \n 4. Consultar Cantidad de espacios disponibles \n 5. Salir \n "))
+        if opcion == 1:
+            print("Las rutas disponibles son:")
+            rutas()
+            control()
 
-    elif opcion == 2:
-        print("Los precios disponibles son:")
-        precios()
-        j = 0
-        while j < 1:        
-            respuesta = int(input("Digite la opción que desea: \n 1. Volver al menú principal \n 2. Salir \n"))
-            if respuesta == 1:
-                i = 0
-                j = 1
-            elif respuesta == 2:
-                print("Gracias por utilizar Radiador Springs S.A.")
-                i = 1
-                j = 1
-            else:
-                print("Por favor digite una opción válida")
-                j = 0
-
-    elif opcion == 3:
-        j = 0
-        while j < 1:
-            respuesta = int(input("Digite la opción que desea: \n 1. Seleccione la ruta \n 2. Volver al menú principal \n 3. Salir \n"))
-            if respuesta == 1:
-                ruta_seleccionada = rutas()
-                precio_seleccionado = precios()
-                if ruta_seleccionada and precio_seleccionado:
-                    campos(ruta_seleccionada, precio_seleccionado)
-                break
-            if respuesta == 2:
-                i = 0
-                j = 1
-            elif respuesta == 3:
-                print("Gracias por utilizar Radiador Springs S.A.")
-                i = 1
-                j = 1
-            else:
-                print("Por favor digite una opción válida")
-                j = 0
-
-    elif opcion == 4:
-        print("Consultar Cantidad de espacios disponibles")
-        j = 0
-        while j < 1:
-            respuesta = int(input("Digite la opción que desea: \n 1. Volver al menú principal \n 2. Salir \n"))
-            if respuesta == 1:
-                print("Verifique los espacios disponibles")
                 
 
-            elif respuesta == 2:
-                i = 0
-                j = 1
-            elif respuesta == 3:
-                print("Gracias por utilizar Radiador Springs S.A.")
-                i = 1
-                j = 1
-            else:
-                print("Por favor digite una opción válida")
-                j = 0
+        elif opcion == 2:
+            print("Los precios disponibles son:")
+            precios()
+            j = 0
+            while j < 1:
+                respuesta = int(input("Digite la opción que desea: \n 1. Volver al menú principal \n 2. Salir \n"))
+                if respuesta == 1:
+                    i = 0
+                    j = 1
+                elif respuesta == 2:
+                    print("Gracias por utilizar Radiador Springs S.A.")
+                    i = 1
+                    j = 1
+                else:
+                    print("Por favor digite una opción válida")
+                    j = 0
 
-    elif opcion == 5:
-        print("Gracias por utilizar Radiador Springs S.A.")
-        i = 1
+        elif opcion == 3:
+            j = 0
+            while j < 1:
+                respuesta = int(input("Digite la opción que desea: \n 1. Seleccione la ruta \n 2. Volver al menú principal \n 3. Salir \n"))
+                if respuesta == 1:
+                    ruta_seleccionada = rutas()
+                    precio_seleccionado = precios()
+                    if ruta_seleccionada and precio_seleccionado:
+                        campos(ruta_seleccionada, precio_seleccionado)
+                    break
+                if respuesta == 2:
+                    i = 0
+                    j = 1
+                elif respuesta == 3:
+                    print("Gracias por utilizar Radiador Springs S.A.")
+                    i = 1
+                    j = 1
+                else:
+                    print("Por favor digite una opción válida")
+                    j = 0
 
-    else: 
-        print("Seleccione una opción válida")
-        i = 0
+        elif opcion == 4:
+            print("Consultar Cantidad de espacios disponibles")
+            j = 0
+            while j < 1:
+                respuesta = int(input("Digite la opción que desea: \n 1. Volver al menú principal \n 2. Salir \n"))
+                if respuesta == 1:
+                    print("Verifique los espacios disponibles")
+                    
+
+                elif respuesta == 2:
+                    i = 0
+                    j = 1
+                elif respuesta == 3:
+                    print("Gracias por utilizar Radiador Springs S.A.")
+                    i = 1
+                    j = 1
+                else:
+                    print("Por favor digite una opción válida")
+                    j = 0
+
+        elif opcion == 5:
+            print("Gracias por utilizar Radiador Springs S.A.")
+            i = 1
+
+        else:
+            print("Seleccione una opción válida")
+            i = 0
