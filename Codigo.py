@@ -15,7 +15,7 @@ def control():
     while true:
         respuesta = int(input("Digite la opción que desea: \n 1. Volver al menú principal \n 2. Salir \n"))
         if respuesta == 1:
-            principal()
+            Menu()
         elif respuesta == 2:
             print("Gracias por utilizar Radiador Springs S.A.")
             break
@@ -72,7 +72,7 @@ def espacios():
         print()
 
 
-def principal():
+def Menu():
     while true:
         opcion = int(input("Digite la opción que desea: \n 1. Ver Rutas \n 2. Ver Precios \n 3. Adquirir Tiquetes \n 4. Consultar Cantidad de espacios disponibles \n 5. Salir \n "))
         if opcion == 1:
@@ -117,4 +117,4 @@ def principal():
         else:
             print("Seleccione una opción válida")
 
-principal()
+Menu()
