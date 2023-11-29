@@ -78,7 +78,12 @@ def Menu():
     while True:
         opcion = int(input("\nDigite la opción que desea: \n 1. Ver Rutas \n 2. Ver Precios \n 3. Adquirir Tiquetes \n 4. Consultar Cantidad de espacios disponibles \n 5. Salir \n "))
         if opcion == 1:
-            print(f"Las rutas disponibles son: {rutas}")
+            print(f"Las rutas disponibles son:")
+            print(rutas[0])
+            print(rutas[1])
+            print(rutas[2])
+            print(rutas[3])
+            print(rutas[4])
             control()
 
         elif opcion == 2:
