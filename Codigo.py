@@ -13,14 +13,14 @@ unidimensional.
 
 def control():
     while True:
-        respuesta = int(input("Digite la opción que desea: \n 1. Volver al menú principal \n 2. Salir \n"))
+        respuesta = int(input("\nDigite la opción que desea: \n 1. Volver al menú principal \n 2. Salir \n"))
         if respuesta == 1:
             Menu()
         elif respuesta == 2:
-            print("Gracias por utilizar Radiador Springs S.A.")
-            break
+            print("\nGracias por utilizar Radiador Springs S.A.")
+            quit()
         else:
-            print("Por favor digite una opción válida")
+            print("\nPor favor digite una opción válida")
 
 
 def rutas():
@@ -73,9 +73,8 @@ def espacios():
 
 
 def Menu():
-    i = 0
     while True:
-        opcion = int(input("Digite la opción que desea: \n 1. Ver Rutas \n 2. Ver Precios \n 3. Adquirir Tiquetes \n 4. Consultar Cantidad de espacios disponibles \n 5. Salir \n "))
+        opcion = int(input("\nDigite la opción que desea: \n 1. Ver Rutas \n 2. Ver Precios \n 3. Adquirir Tiquetes \n 4. Consultar Cantidad de espacios disponibles \n 5. Salir \n "))
         if opcion == 1:
             print("Las rutas disponibles son:")
             rutas()
@@ -113,9 +112,10 @@ def Menu():
 
         elif opcion == 5:
             print("Gracias por utilizar Radiador Springs S.A.")
-            break
+            False
 
         else:
-            print("Seleccione una opción válida")
+            print("\nSeleccione una opción válida")
+
 
 Menu()
