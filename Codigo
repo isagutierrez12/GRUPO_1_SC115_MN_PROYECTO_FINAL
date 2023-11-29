@@ -12,15 +12,15 @@ unidimensional.
 '''
 
 def control():
-while true:
-respuesta = int(input("Digite la opción que desea: \n 1. Volver al menú principal \n 2. Salir \n"))
-    if respuesta == 1:
-        principal()
-    elif respuesta == 2:
-        print("Gracias por utilizar Radiador Springs S.A.")
-        break
-    else:
-        print("Por favor digite una opción válida")
+    while true:
+    respuesta = int(input("Digite la opción que desea: \n 1. Volver al menú principal \n 2. Salir \n"))
+        if respuesta == 1:
+            principal()
+        elif respuesta == 2:
+            print("Gracias por utilizar Radiador Springs S.A.")
+            break
+        else:
+            print("Por favor digite una opción válida")
 
 
 def rutas():
