@@ -119,19 +119,14 @@ def Menu():
         opcion = int(input("\nDigite la opción que desea: \n 1. Ver Rutas \n 2. Ver Precios \n 3. Adquirir Tiquetes \n 4. Consultar Cantidad de espacios disponibles \n 5. Salir \n "))
         if opcion == 1:
             print(f"\nLas rutas disponibles son:")
-            print(rutas1[0])
-            print(rutas1[1])
-            print(rutas1[2])
-            print(rutas1[3])
-            print(rutas1[4])
+            for ruta in rutas1:
+                print(ruta)
             control()
 
         elif opcion == 2:
             print(f"\nLos precios disponibles son:")
-            print(precios1[0])
-            print(precios1[1])
-            print(precios1[2])
-            print(precios1[3])
+            for precio in precios1:
+                print(precio)
             control()
 
         elif opcion == 3:
