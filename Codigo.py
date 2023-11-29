@@ -117,29 +117,19 @@ def Menu():
             control()
 
         elif opcion == 4:
-            print(rutas1[0])
-            print(rutas1[1])
-            print(rutas1[2])
-            print(rutas1[3])
-            print(rutas1[4])
-            while True:
-                ruta_seleccionada = print("Seleccione la ruta que desea consultar:")
-                if  ruta_seleccionada == 1:
-                    matriz = matriz1
-                elif ruta_seleccionada == 2:
-                    matriz = matriz2
-                elif ruta_seleccionada == 3:
-                    matriz = matriz3
-                elif ruta_seleccionada == 4:
-                    matriz = matriz4
-                elif ruta_seleccionada == 5:
-                    matriz = matriz5
-                else:
-                    print("Inserte una opción válida")
-
-                if ruta_seleccionada:
-                    espacios(matriz)
-
+            ruta_seleccionada = rutas(rutas1)
+            if  ruta_seleccionada == 1:
+                matriz = matriz1
+            elif ruta_seleccionada == 2:
+                matriz = matriz2
+            elif ruta_seleccionada == 3:
+                matriz = matriz3
+            elif ruta_seleccionada == 4:
+                matriz = matriz4
+            elif ruta_seleccionada == 5:
+                matriz = matriz5
+            if ruta_seleccionada:
+                espacios(matriz)
             control()
 
         elif opcion == 5:
