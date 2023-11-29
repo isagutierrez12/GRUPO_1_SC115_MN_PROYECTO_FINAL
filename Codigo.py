@@ -1,3 +1,5 @@
+import os
+
 '''
 Radiador Springs S.A.
 
@@ -52,7 +54,7 @@ def precios(precios1):
     print(precios[Tiquete_seleccionado - 1])
     #Agregar while y opcion de else
 
-def campos(matriz):
+def campos(matriz, precio):
     while True:
         cantidad = int(input("Digite la cantidad de tiquetes que desea: "))
 
@@ -77,6 +79,24 @@ def campos(matriz):
                         print("El espacio seleccionado ya está ocupado")
                 else:
                     print("Selección de asiento no válida.")
+
+            subtotal = cantidad * precio
+            iva = subtotal * 0.13
+            total = subtotal + iva
+
+            archivo = open("factura.txt","a")
+            archivo.write("El detalle de su compra\n")
+            archivo.write(f"Cantidad de tiquetes comprados: {cantidad}\n")
+            archivo.write(f"Tipo de tiquetes: {precio} colones")
+            archivo.write(f"Subtotal: {subtotal} colones")
+            archivo.write(f"iva: {iva} colones")
+            archivo.write(f"Total: {total} colones")
+            archivo.close()
+
+            print(f"subtotal: {subtotal}" )
+            print(f"iva: {iva} " )
+            print(f"total: {total}" )
+
             break
         else:
             print("El máximo de tiquetes que puede comprar es 10")
@@ -126,9 +146,19 @@ def Menu():
                 matriz = matriz4
             elif ruta_seleccionada == 5:
                 matriz = matriz5
+
             precio_seleccionado = precios(precios1)
+            if  precio_seleccionado == 1:
+                precio = 500
+            elif precio_seleccionado == 2:
+                precio = 1000
+            elif precio_seleccionado == 3:
+                precio = 6000
+            elif precio_seleccionado == 4:
+                precio = 20000
+
             if ruta_seleccionada and precio_seleccionado:
-                campos(matriz)
+                campos(matriz, precio)
             control()
 
         elif opcion == 4:
