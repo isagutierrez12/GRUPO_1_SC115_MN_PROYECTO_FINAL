@@ -85,12 +85,12 @@ def campos(matriz, precio):
             total = subtotal + iva
 
             archivo = open("factura.txt","a")
-            archivo.write("El detalle de su compra\n")
+            archivo.write("\nEl detalle de su compra\n")
             archivo.write(f"Cantidad de tiquetes comprados: {cantidad}\n")
-            archivo.write(f"Tipo de tiquetes: {precio} colones")
-            archivo.write(f"Subtotal: {subtotal} colones")
-            archivo.write(f"iva: {iva} colones")
-            archivo.write(f"Total: {total} colones")
+            archivo.write(f"Tipo de tiquetes: {precio} colones\n")
+            archivo.write(f"Subtotal: {subtotal} colones\n")
+            archivo.write(f"iva: {iva} colones\n")
+            archivo.write(f"Total: {total} colones\n")
             archivo.close()
 
             print(f"subtotal: {subtotal}" )
