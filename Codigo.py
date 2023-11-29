@@ -53,23 +53,33 @@ def precios(precios1):
     #Agregar while y opcion de else
 
 def campos(matriz):
-    for x in range (0,5):
-        for y in range (0,2):
-            print(matriz[x][y],end= " ")
-        print("\n")
-    
-    x = int(input("Seleccione la fila (1-5): "))
-    y = int(input("Seleccione la columna (1-2): "))
-    if 1 <= x <= 5 and 1 <= y <= 2:
-        x -= 1
-        y -= 1
-        if matriz[x][y] != "O":
-            matriz[x][y] = "O"
-            print(f"Ha seleccionado el asiento: Fila {x + 1}, Columna {y + 1}")
+    while True:
+        cantidad = int(input("Digite la cantidad de tiquetes que desea: "))
+
+        if cantidad <= 10:
+            for r in range (cantidad):
+            
+                for x in range (0,5):
+                    for y in range (0,2):
+                        print(matriz[x][y],end= " ")
+                    print("\n")
+                
+
+                x = int(input("Seleccione la fila (1-5): "))
+                y = int(input("Seleccione la columna (1-2): "))
+                if 1 <= x <= 5 and 1 <= y <= 2:
+                    x -= 1
+                    y -= 1
+                    if matriz[x][y] != "O":
+                        matriz[x][y] = "O"
+                        print(f"Ha seleccionado el asiento: Fila {x + 1}, Columna {y + 1}")
+                    else:
+                        print("El espacio seleccionado ya está ocupado")
+                else:
+                    print("Selección de asiento no válida.")
+            break
         else:
-            print("El espacio seleccionado ya está ocupado")
-    else:
-        print("Selección de asiento no válida.")
+            print("El máximo de tiquetes que puede comprar es 10")
     
 def espacios(matriz):
     disponibles = 0
@@ -139,7 +149,7 @@ def Menu():
 
         elif opcion == 5:
             print("Gracias por utilizar Radiador Springs S.A.")
-            False
+            break
 
         else:
             print("\nSeleccione una opción válida")
