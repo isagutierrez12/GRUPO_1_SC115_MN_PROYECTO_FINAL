@@ -11,6 +11,18 @@ por un día 1000 colones”, etc. Para esto utilice un arreglo
 unidimensional.
 '''
 
+def control():
+while true:
+respuesta = int(input("Digite la opción que desea: \n 1. Volver al menú principal \n 2. Salir \n"))
+    if respuesta == 1:
+        principal()
+    elif respuesta == 2:
+        print("Gracias por utilizar Radiador Springs S.A.")
+        break
+    else:
+        print("Por favor digite una opción válida")
+
+
 def rutas():
     rutas = ["Ruta 1: Coronado - San José","Ruta 2: Guadalupe - San José","Ruta 3: Tibas - San José","Ruta 4: San Pedro - San José","Ruta 5: Santa Marta - San José"]
 
@@ -68,17 +80,7 @@ while i < 1:
         rutas()
         j = 0
         while j < 1:
-            respuesta = int(input("Digite la opción que desea: \n 1. Volver al menú principal \n 2. Salir \n"))
-            if respuesta == 1:
-                i = 0
-                j = 1
-            elif respuesta == 2:
-                print("Gracias por utilizar Radiador Springs S.A.")
-                i = 1
-                j = 1
-            else:
-                print("Por favor digite una opción válida")
-                j = 0
+            
 
     elif opcion == 2:
         print("Los precios disponibles son:")
