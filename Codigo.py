@@ -12,7 +12,7 @@ unidimensional.
 '''
 
 def control():
-    while true:
+    while True:
         respuesta = int(input("Digite la opción que desea: \n 1. Volver al menú principal \n 2. Salir \n"))
         if respuesta == 1:
             Menu()
@@ -73,7 +73,7 @@ def espacios():
 
 
 def Menu():
-    while true:
+    while True:
         opcion = int(input("Digite la opción que desea: \n 1. Ver Rutas \n 2. Ver Precios \n 3. Adquirir Tiquetes \n 4. Consultar Cantidad de espacios disponibles \n 5. Salir \n "))
         if opcion == 1:
             print("Las rutas disponibles son:")
