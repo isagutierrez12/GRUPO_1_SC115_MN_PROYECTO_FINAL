@@ -84,7 +84,16 @@ def campos(matriz, precio):
             iva = subtotal * 0.13
             total = subtotal + iva
 
-            archivo = open("factura.txt","a")
+            archivo = open("Factura.txt","w")
+            archivo.write("\nEl detalle de su compra\n")
+            archivo.write(f"Cantidad de tiquetes comprados: {cantidad}\n")
+            archivo.write(f"Tipo de tiquetes: {precio} colones\n")
+            archivo.write(f"Subtotal: {subtotal} colones\n")
+            archivo.write(f"iva: {iva} colones\n")
+            archivo.write(f"Total: {total} colones\n")
+            archivo.close()
+
+            archivo = open("Control ventas.txt","a")
             archivo.write("\nEl detalle de su compra\n")
             archivo.write(f"Cantidad de tiquetes comprados: {cantidad}\n")
             archivo.write(f"Tipo de tiquetes: {precio} colones\n")
