@@ -60,27 +60,26 @@ def campos(matriz, precio):
             if cantidad <= 10:
                 print("\n")
 
-                
                 for r in range (0,cantidad):
-                    
-                    for x in range (0,5):
-                        for y in range (0,2):
-                            print(matriz[x][y],end= " ")
-                        print("\n")
-                        
-                    x = int(input("Seleccione la fila que desea (1-5): \n"))
-                    y = int(input("Seleccione la columna que desea (1-2): \n"))
-                    if 1 <= x <= 5 and 1 <= y <= 2:
-                        x -= 1
-                        y -= 1
-                        if matriz[x][y] != "O":
-                            matriz[x][y] = "O"
-                            print(f"\nHa seleccionado el asiento: Fila {x + 1}, Columna {y + 1}\n")
+                    while True:
+                        for x in range (0,5):
+                            for y in range (0,2):
+                                print(matriz[x][y],end= " ")
+                            print("\n")
+                            
+                        x = int(input("Seleccione la fila que desea (1-5): \n"))
+                        y = int(input("Seleccione la columna que desea (1-2): \n"))
+                        if 1 <= x <= 5 and 1 <= y <= 2:
+                            x -= 1
+                            y -= 1
+                            if matriz[x][y] != "O":
+                                matriz[x][y] = "O"
+                                print(f"\nHa seleccionado el asiento: Fila {x + 1}, Columna {y + 1}\n")
+                                break
+                            else:
+                                print("El espacio seleccionado ya está ocupado\n")
                         else:
-                            print("El espacio seleccionado ya está ocupado\n")
-                            break
-                    else:
-                        print("Selección de asiento no válida.\n")
+                            print("Selección de asiento no válida.\n")
 
 
                 subtotal = cantidad * precio
