@@ -30,7 +30,6 @@ def rutas(rutas1):
 
             if 1 <= ruta_seleccionada <= 5:
                 return ruta_seleccionada
-                print(rutas1[ruta_seleccionada - 1])
             else:
                 print("\nPor favor digite una opción válida\n")
         except:
@@ -47,7 +46,6 @@ def precios(precios1):
 
             if 1 <= Tiquete_seleccionado <= 4:
                 return Tiquete_seleccionado
-                print(precios1[Tiquete_seleccionado - 1])
             else:
                 print("\nPor favor digite una opción válida\n")
         except:
