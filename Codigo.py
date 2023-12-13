@@ -30,7 +30,7 @@ def rutas(rutas1):
 
             if 1 <= ruta_seleccionada <= 5:
                 return ruta_seleccionada
-                print(rutas[ruta_seleccionada - 1])
+                print(rutas1[ruta_seleccionada - 1])
             else:
                 print("\nPor favor digite una opción válida\n")
         except:
@@ -47,14 +47,14 @@ def precios(precios1):
 
             if 1 <= Tiquete_seleccionado <= 4:
                 return Tiquete_seleccionado
-                print(precios[Tiquete_seleccionado - 1])
+                print(precios1[Tiquete_seleccionado - 1])
             else:
                 print("\nPor favor digite una opción válida\n")
         except:
             print("\nPor favor digite una opción válida\n")
 
 
-def campos(matriz, precio):
+def campos(matriz, precio, ruta_seleccionada):
     while True:
         try:
             cantidad = int(input("\nDigite la cantidad de tiquetes que desea (1-10): \n"))
@@ -86,29 +86,56 @@ def campos(matriz, precio):
                             print("\nSelección de asiento no válida.\n")
                             
 
+                #validación para imprimir el dato correcto en el detalle de la compra
+                if precio == 500:
+                    tipo = precios1[0]
+                elif precio == 1000:
+                    tipo = precios1[1]
+                elif precio == 6000:
+                    tipo = precios1[2]
+                elif precio == 20000:
+                    tipo = precios1[3]
 
+                #validación para imprimir el dato correcto en el detalle de la compra
+                if ruta_seleccionada == 1:
+                    ruta = rutas1[0]
+                elif ruta_seleccionada == 2:
+                    ruta = rutas1[1]
+                elif ruta_seleccionada == 3:
+                    ruta = rutas1[2]
+                elif ruta_seleccionada == 4:
+                    ruta = rutas1[3]
+                elif ruta_seleccionada == 5:
+                    ruta = rutas1[4]
+                    
                 subtotal = cantidad * precio
                 iva = subtotal * 0.13
                 total = subtotal + iva
 
                 archivo = open("Factura.txt","w")
-                archivo.write("\nEl detalle de su compra\n")
+                archivo.write("\nDetalle de su compra\n")
                 archivo.write(f"Cantidad de tiquetes comprados: {cantidad}\n")
-                archivo.write(f"Tipo de tiquetes: {precio} colones\n")
+                archivo.write(f"Tipo de tiquetes: {tipo}\n")
+                archivo.write(f"{ruta}\n")
                 archivo.write(f"Subtotal: {subtotal} colones\n")
                 archivo.write(f"IVA: {iva} colones\n")
                 archivo.write(f"Total: {total} colones\n")
                 archivo.close()
 
                 archivo = open("Control ventas.txt","a")
-                archivo.write("\nEl detalle de su compra\n")
+                archivo.write("\nDetalle de su compra\n")
                 archivo.write(f"Cantidad de tiquetes comprados: {cantidad}\n")
-                archivo.write(f"Tipo de tiquetes: {precio} colones\n")
+                archivo.write(f"Tipo de tiquetes: {tipo}\n")
+                archivo.write(f"{ruta}\n")
                 archivo.write(f"Subtotal: {subtotal} colones\n")
                 archivo.write(f"IVA: {iva} colones\n")
                 archivo.write(f"Total: {total} colones\n")
                 archivo.close()
 
+                print("Detalle de su compra:")
+                print(f"Cantidad de tiquetes comprados: {cantidad}")
+                print(f"Tipo de tiquetes: {tipo}")
+                print(f"{ruta}")
                 print(f"Subtotal: {subtotal}" )
                 print(f"IVA: {iva} " )
                 print(f"Total: {total}" )
@@ -174,7 +201,7 @@ def Menu():
                 precio = 20000
 
             if ruta_seleccionada and precio_seleccionado:
-                campos(matriz, precio)
+                campos(matriz, precio, ruta_seleccionada)
             control()
             break
 
