@@ -13,9 +13,10 @@ def control():
         respuesta = input("\nDigite la opción que desea: \n 1. Volver al menú principal \n 2. Salir \n")
         if respuesta == "1":
             Menu()
+            break
         elif respuesta == "2":
             print("\nGracias por utilizar Radiador Springs S.A.")
-            quit()
+            break
         else:
             print("\nPor favor digite una opción válida")
 
@@ -62,24 +63,28 @@ def campos(matriz, precio):
 
                 for r in range (0,cantidad):
                     while True:
-                        for x in range (0,5):
-                            for y in range (0,2):
-                                print(matriz[x][y],end= " ")
-                            print("\n")
-                            
-                        x = int(input("Seleccione la fila que desea (1-5): \n"))
-                        y = int(input("Seleccione la columna que desea (1-2): \n"))
-                        if 1 <= x <= 5 and 1 <= y <= 2:
-                            x -= 1
-                            y -= 1
-                            if matriz[x][y] != "O":
-                                matriz[x][y] = "O"
-                                print(f"\nHa seleccionado el asiento: Fila {x + 1}, Columna {y + 1}\n")
-                                break
+                        try:
+                            for x in range (0,5):
+                                for y in range (0,2):
+                                    print(matriz[x][y],end= " ")
+                                print("\n")
+                                
+                            x = int(input("Seleccione la fila que desea (1-5): \n"))
+                            y = int(input("Seleccione la columna que desea (1-2): \n"))
+                            if 1 <= x <= 5 and 1 <= y <= 2:
+                                x -= 1
+                                y -= 1
+                                if matriz[x][y] != "O":
+                                    matriz[x][y] = "O"
+                                    print(f"\nHa seleccionado el asiento: Fila {x + 1}, Columna {y + 1}\n")
+                                    break
+                                else:
+                                    print("\nEl espacio seleccionado ya está ocupado\n")
                             else:
-                                print("El espacio seleccionado ya está ocupado\n")
-                        else:
-                            print("Selección de asiento no válida.\n")
+                                print("\nSelección de asiento no válida.\n")
+                        except:
+                            print("\nSelección de asiento no válida.\n")
+                            
 
 
                 subtotal = cantidad * precio
@@ -129,18 +134,21 @@ def espacios(matriz):
 
 def Menu():
     while True:
+        i = 0
         opcion = input("\nDigite la opción que desea: \n 1. Ver Rutas \n 2. Ver Precios \n 3. Adquirir Tiquetes \n 4. Consultar Cantidad de espacios disponibles \n 5. Salir \n ")
         if opcion == "1":
             print(f"\nLas rutas disponibles son:")
             for ruta in rutas1:
                 print(ruta)
             control()
+            break
 
         elif opcion == "2":
             print(f"\nLos precios disponibles son:")
             for precio in precios1:
                 print(precio)
             control()
+            break
 
         elif opcion == "3":
             ruta_seleccionada = rutas(rutas1)
@@ -168,6 +176,7 @@ def Menu():
             if ruta_seleccionada and precio_seleccionado:
                 campos(matriz, precio)
             control()
+            break
 
         elif opcion == "4":
             ruta_seleccionada = rutas(rutas1)
@@ -184,6 +193,7 @@ def Menu():
             if ruta_seleccionada:
                 espacios(matriz)
             control()
+            break
 
         elif opcion == "5":
             print("Gracias por utilizar Radiador Springs S.A.")
