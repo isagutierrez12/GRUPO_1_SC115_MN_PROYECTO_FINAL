@@ -56,7 +56,7 @@ def campos(matriz, precio, ruta_seleccionada):
     while True:
         try:
             cantidad = int(input("\nDigite la cantidad de tiquetes que desea (1-10): \n"))
-            if cantidad <= 10:
+            if 1 <= cantidad <= 10:
                 print("\n")
 
                 for r in range (0,cantidad):
